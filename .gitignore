@@ -1,0 +1,90 @@
+# Go Binaries
+# -----------
+# Executables created by `go build`
+*.exe
+*.dll
+*.so
+*.dylib
+*.wasm
+*.o
+*.a
+
+# Binaries for different OS (if building for them)
+# For example, if you built for Windows on Mac
+# go-task-ai.exe
+# main.exe
+
+# General binaries
+*.[Dd]ebug
+*.[Rr]elease
+
+# Go Cache Files
+# --------------
+# Module cache
+.go/
+go.work.sum
+
+# Test cache
+*.test
+*.out
+bin/
+# Operating System Files
+# --------------------
+.DS_Store # macOS
+.localized # macOS
+.Trashes # macOS
+ehthumbs.db # Windows
+Thumbs.db # Windows
+Desktop.ini # Windows
+
+# Editor/IDE Files
+# ----------------
+# VS Code
+.vscode/
+
+# IntelliJ / GoLand
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.bak
+*~
+*.log
+
+# Emacs
+#*#
+.#*
+*.elc
+.abbrev_defs
+.emacs.desktop
+.local/
+.lsp-session-v1/
+.dir-locals.el
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Local Configuration Files
+# -------------------------
+# Environment-specific configuration files that shouldn't be committed
+# For example:
+# config.local.json
+# .env
+# *.env
+# .env.*
+
+# Vendor directory (if not using Go Modules)
+# ------------------------------------------
+# If you're using Go Modules (which you are), you don't need to add this.
+# But if you ever work on an older project, you might see it.
+# vendor/
+
+# Log Files
+# ---------
+log/
+*.log
