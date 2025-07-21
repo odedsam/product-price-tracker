@@ -8,20 +8,22 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	_ "modernc.org/sqlite" // Import pure Go SQLite driver
 )
 
 func main() {
-    // initialize database
+    // Initialize database
     db, err := NewDatabase("prices.db")
     if err != nil {
         log.Fatal("Failed to initialize database:", err)
     }
     defer db.Close()
 
-    // create tracker
+    // Create tracker
     tracker := NewPriceTracker(db)
 
-    // add some sample products to track
+    // Add some sample products to track
     sampleProducts := []Product{
         {ID: "laptop-1", Name: "Gaming Laptop", URL: "https://example.com/laptop-1"},
         {ID: "phone-1", Name: "Smartphone X", URL: "https://example.com/phone-1"},
@@ -72,3 +74,4 @@ func main() {
 
     log.Println("Server stopped")
 }
+
